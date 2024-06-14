@@ -1,0 +1,81 @@
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:link, a:active, a:visited { color: #15d; }
+body {
+    font-family: mono, monospaced, courrier;
+    font-size: 22px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 4em;
+    text-align: justify;
+}
+h2 { font-size: 140%; }
+h1,h2,h3,h4 { color: #444; text-align: left; }
+hr {
+    border: dashed thin #444;
+    margin: 30px 0;
+}
+ul {
+    list-style-type: '- ';
+}
+@media(max-width:804px) {
+    body {
+	font-size: 18px;
+	margin: 0 2px;
+	text-align: left;
+    }
+}
+.center { text-align: center }
+table { border-collapse: collapse; } 
+tr:nth-child(even) { background-color: #eee; }
+td {
+    padding: 0 5px;
+    text-align: left;
+}
+.break { color: #444; }
+
+/* Schedule */
+#week1 { --rows: 17 }
+#week2 { --rows: 15 }
+.schedule {
+    display: grid;
+    grid-template-columns: [time] auto [mon] 1fr [tue] 1fr [wed] 1fr [thu] 1fr [fri] 1fr;
+    grid-template-rows: [day] auto [schedule] repeat(var(--rows), 1.5em) [row-end];
+    grid-auto-flow: column;
+    gap: 2px;
+}
+.time {
+    grid-column: time;
+    grid-row-end: span 2;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.day {
+    grid-row-start: day;
+}
+.time, .day {
+    font-weight: bold;
+}
+.schedule > * {
+    text-align: center;
+    font-size: 80%;
+}
+
+.lat, .iso, .cod, .mul, .oth, .brk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lat, .iso, .cod, .mul {
+    grid-row-end: span 2;
+}
+.lat.ps, .iso.ps, .cod.ps, .mul.ps {
+    grid-row-end: span 3;
+}
+.lat, .cod { background-color: #aaaaff }
+.iso, .mul { background-color: #ffaaaa }
+.brk { background-color: #eee }
+.oth { background-color: #aaffaa }
+.ps { color: #fff }
