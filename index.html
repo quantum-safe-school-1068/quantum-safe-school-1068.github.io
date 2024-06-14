@@ -1,0 +1,193 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Introduction to Quantum-Safe Cryptography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base target="_blank">
+    <style>
+      a { text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      a:link, a:active, a:visited { color: #15d; }
+      body {
+	  font-family: mono, monospaced, courrier;
+	  font-size: 22px;
+	  max-width: 800px;
+	  margin: auto;
+	  margin-bottom: 4em;
+	  text-align: justify;
+      }
+      h2 { font-size: 140%; }
+      h1,h2,h3,h4 { color: #444; text-align: left; }
+      hr {
+	  border: dashed thin #444;
+	  margin: 30px 0;
+      }
+      ul {
+	  list-style-type: '- ';
+      }
+      @media(max-width:804px) {
+	  body {
+	      font-size: 18px;
+	      margin: 0 2px;
+	      text-align: left;
+	  }
+      }
+      .center { text-align: center }
+      table { border-collapse: collapse; } 
+      tr:nth-child(even) { background-color: #eee; }
+      td {
+	  padding: 0 5px;
+	  text-align: left;
+      }
+      .break { color: #444; }
+    </style>
+    <style>
+      #schedule { font-size: 12px; }
+      #schedule td { text-align: center; }
+      #schedule tbody { border-bottom: solid 2em white }
+      #schedule thead th { width: 5%; text-align: center; transform: translateX(50%) }
+      #schedule th[scope="row"] { width: 5em; padding-right: 2em; text-align: right }
+      .lunch, .coffee { background-color: #ffffaa }
+      .lat, .cod { background-color: #aaaaff }
+      .iso, .mul { background-color: #ffaaaa }
+      .ps { color: #fff }
+      .tbd { background-color: #aaffaa }
+    </style>
+    
+    <meta name="twitter:title" content="Introduction to Quantum-Safe Cryptography">
+    <meta property="og:title" content="Introduction to Quantum-Safe Cryptography">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="June 24 to July 5, 2024, Rüschlikon, Switzerland. An SLMath+IBM research school.">
+    <meta name="twitter:description" content="June 24 to July 5, 2024, Rüschlikon, Switzerland. An SLMath+IBM research school.">
+    <meta property="og:description" content="June 24 to July 5, 2024, Rüschlikon, Switzerland. An SLMath+IBM research school.">
+    <meta property="og:url" content="https:///">
+    <meta property="og:type" content="website">
+    
+  </head>
+  <body>
+    <h2># Introduction to Quantum-Safe Cryptography<br>
+        <small><small>An SLMath+IBM research school</small></small></h2>
+    
+    <h3>## Summary</h3>
+    <ul>
+      <li><a target="_self" href="#when">When? Where?</a></li>
+      <li><a target="_self" href="#schedule">Schedule</a></li>
+      <li><a target="_self" href="#courses">Courses</a></li>
+    </ul>
+
+    <hr>
+    
+    <h3 id="when">## When? Where?</h3>
+
+    <blockquote>
+      <p><strong>**From June 24 to July 5, 2024**</strong></p>
+      
+      <address>
+	ThinkLab<br>
+	<a href="https://www.zurich.ibm.com/">IBM Research Switzerland</a><br>
+	Säumerstrasse 4, 8803 Rüschlikon<br>
+	<a target="_self" href="geo:47.30974,8.54530?z=17">47.30974,8.54530</a> – <a href="https://www.openstreetmap.org/?mlat=47.30974&mlon=8.54530#map=17/47.30974/8.54530&layers=T">See on a map</a>.
+      </address>
+    </blockquote>
+    
+    <hr>
+
+    <table id="schedule">
+      <thead>
+	<tr>
+	  <th><span>9:00</span></th><th></th><th>10:00</th><th></th><th>11:00</th><th></th><th>12:00</th><th></th><th></th><th>13:30</th><th></th><th>14:30</th><th></th><th>15:30</th><th></th><th>16:30</th><th></th><th>17:30</th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr>
+	  <th scope="row">Mon 24</th>
+	  <td class="tbd">IBM Research overview</td>
+	  <td colspan="2" class="lat">Lattices</td>
+	  <td class="coffee">Coffee break</td>
+	  <td colspan="3" class="lat ps">Lattices (PS)</td>
+	  <td colspan="3" class="lunch">Lunch</td>
+	  <td colspan="2" class="iso">Isogenies</td>
+	  <td class="coffee">Coffee break</td>
+	  <td colspan="3" class="iso ps">Isogenies (PS)</td>
+	  <td class="tbd">Welcome by SLMath</td>
+	</tr>
+	<tr>
+	  <th scope="row">Tue 25</th>
+	  <td colspan="2" class="iso">Isogenies</td>
+	  <td             rowspan="4" class="coffee">Coffee break</td>
+	  <td colspan="3" class="iso ps">Isogenies (PS)</td>
+	  <td colspan="3" rowspan="4" class="lunch">Lunch</td>
+	  <td colspan="2" class="lat">Lattices</td>
+	  <td class="coffee">Coffee break</td>
+	  <td colspan="3" class="lat ps">Lattices (PS)</td>
+	</tr>
+	<tr>
+	  <th scope="row">Wed 26</th>
+	  <td colspan="2" class="lat">Lattices</td>
+	  <td colspan="2" class="iso">Isogenies</td>
+	  <td class="tbd">Lab tour</td>
+	  <td colspan="8" class="tbd">Social activity</td>
+	</tr>
+	<tr>
+	  <th scope="row">Thu 27</th>
+	  <td colspan="2" class="lat">Lattices</td>
+	  <td colspan="3" class="lat ps">Lattices (PS)</td>
+	  <td colspan="2" class="iso">Isogenies</td>
+	  <td rowspan="2" class="coffee">Coffee break</td>
+	  <td colspan="2" class="tbd">NIST report</td>
+	  <td colspan="2" class="tbd">Presentations</td>
+	</tr>
+	<tr>
+	  <th scope="row">Fri 28</th>
+	  <td colspan="2" class="iso">Isogenies</td>
+	  <td colspan="3" class="iso ps">Isogenies (PS)</td>
+	  <td colspan="2" class="lat">Lattices</td>
+	  <td colspan="3" class="tbd">Careers</td>
+	</tr>
+      </tbody>
+      <tbody>
+	<tr>
+	  <th scope="row">Mon 1</th>
+	  <td colspan="2" class="cod">Codes</td>
+	  <td rowspan="5" class="coffee">Coffee break</td>
+	  <td colspan="3" class="cod ps">Codes (PS)</td>
+	  <td colspan="3" rowspan="4" class="lunch">Lunch</td>
+	  <td colspan="2" class="mul">Multivariate</td>
+	  <td rowspan="2" class="coffee">Coffee break</td>
+	  <td colspan="3" class="mul ps">Multivariate (PS)</td>
+	</tr>
+	<tr>
+	  <th scope="row">Tue 2</th>
+	  <td colspan="2" class="mul">Multivariate</td>
+	  <td colspan="3" class="mul ps">Multivariate (PS)</td>
+	  <td colspan="2" class="cod">Codes</td>
+	  <td colspan="4" class="tbd">Presentations</td>
+	</tr>
+	<tr>
+	  <th scope="row">Wed 3</th>
+	  <td colspan="2" class="cod">Codes</td>
+	  <td colspan="2" class="mul">Multivariate</td>
+	  <td class="lunch"></td>
+	</tr>
+	<tr>
+	  <th scope="row">Thu 4</th>
+	  <td colspan="2" class="mul">Multivariate</td>
+	  <td colspan="3" class="mul ps">Multivariate (PS)</td>
+	  <td colspan="2" class="cod">Codes</td>
+	  <td rowspan="2" class="coffee">Coffee break</td>
+	  <td colspan="3" class="cod ps">Codes (PS)</td>
+	</tr>
+	<tr>
+	  <th scope="row">Fri 5</th>
+	  <td colspan="2" class="cod">Codes</td>
+	  <td colspan="3" class="cod ps">Codes (PS)</td>
+	  <td colspan="3" class="lunch">Lunch with A. Curioni</td>
+	  <td colspan="2" class="mul">Multivariate</td>
+	  <td colspan="3" class="tbd">Presentations</td>
+	</tr>
+      </tbody>
+    </table>
+
+    <h3 id="courses">## Courses</h3>
+</html>
