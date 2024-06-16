@@ -10,21 +10,23 @@
     <meta name="description" content="June 24 to July 5, 2024, Rüschlikon, Switzerland. An SLMath+IBM research school.">
     <meta name="twitter:description" content="June 24 to July 5, 2024, Rüschlikon, Switzerland. An SLMath+IBM research school.">
     <meta property="og:description" content="June 24 to July 5, 2024, Rüschlikon, Switzerland. An SLMath+IBM research school.">
-    <meta property="og:url" content="https:///">
+    <meta property="og:url" content="https://quantum-safe-school-1068.github.io/">
     <meta property="og:type" content="website">
 
+    <base target="_blank">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h2># Introduction to Quantum-Safe Cryptography<br>
-        <small><small>An SLMath+IBM research school</small></small></h2>
+        <small><small>An <a href="https://www.slmath.org/summer-schools/1068">SLMath</a>+<a href="https://research.ibm.com/">IBM</a> research school</small></small></h2>
     
     <h3>## Summary</h3>
     <ul>
-      <li><a href="#when">When? Where?</a></li>
-      <li><a href="#week1">Schedule: Week 1</a></li>
-      <li><a href="#week2">Schedule: Week 2</a></li>
-      <li><a href="#courses">Courses</a></li>
+      <li><a target="_self" href="#when">When? Where?</a></li>
+      <li><a target="_self" href="#week1">Schedule: Week 1</a></li>
+      <li><a target="_self" href="#week2">Schedule: Week 2</a></li>
+      <li><a target="_self" href="#preparing">Preparing for the school</a></li>
+      <li><a target="_self" href="#courses">Courses</a></li>
     </ul>
 
     <hr>
@@ -35,10 +37,10 @@
       <p><strong>**From June 24 to July 5, 2024**</strong></p>
       
       <address>
-	ThinkLab<br>
-	<a target="_blank" href="https://www.zurich.ibm.com/">IBM Research Switzerland</a><br>
+	<a href="https://www.ibm.com/about/innovation-studio/zurich">ThinkLab</a><br>
+	<a href="https://www.zurich.ibm.com/">IBM Research Switzerland</a><br>
 	Säumerstrasse 4, 8803 Rüschlikon<br>
-	<a href="geo:47.30974,8.54530?z=17">47.30974,8.54530</a> – <a target="_blank" href="https://www.openstreetmap.org/?mlat=47.30974&mlon=8.54530#map=17/47.30974/8.54530&layers=T">See on a map</a>.
+	<a href="geo:47.30974,8.54530?z=17">47.30974,8.54530</a> – <a href="https://www.openstreetmap.org/?mlat=47.30974&mlon=8.54530#map=17/47.30974/8.54530&layers=T">See on a map</a>.
       </address>
     </blockquote>
     
@@ -180,5 +182,175 @@
 
     <hr>
     
+    <h3 id="preparing">## Preparing for the school</h3>
+    <ul>
+      <li>Revise on a basic course in linear algebra, for example
+	  Axler's <a href="https://linear.axler.net/">Linear Algebra
+	  Done Right</a>.</li>
+      <li>Revise on a basic course in abstract algebra, for example
+	Atiyah and
+	MacDonald's <a href="https://www.taylorfrancis.com/books/mono/10.1201/9780429493638/introduction-commutative-algebra-michael-atiyah-macdonald">Introduction
+	to Commutative Algebra</a>.</li>
+      <li><em>_Optional reading:_</em> Steven
+	  Galbraith's <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/crypto-book.html">Mathematics
+	  of Public Key Cryptography</a>.
+	</li>
+      <li><strong>**Important!**</strong>
+	Install <a href="https://www.sagemath.org/">SageMath</a> and
+	familiarize yourself with it.  Recommended
+	textbook: <a href="https://www.sagemath.org/sagebook/">Computational
+	Mathematics with SageMath</a>.</li>
+      <li><strong>**Important!**</strong> Familiarize yourself with
+	python 3 and numpy (these are installed with SageMath, so you
+	may use the versions shipped with it).  Before the course, try
+	implementing polynomial multiplication over the ring
+	Z[X]/(X^n+1) for n being a variable (up to 1024 or so), and
+	the integers in the ring not being too large (up to 30
+	bits).</li>
+    </ul>
+
+    <hr>
+    
     <h3 id="courses">## Courses</h3>
+
+    <h4 id="lattice">### Lattice-based cryptography<br>
+          <small>by <a href="https://research.ibm.com/people/vadim-lyubashevsky">Vadim
+	  Lyubshevsky</a> (IBM Research, Switzerland)</small></h4>
+
+    <p>The course will cover the following topics:</p>
+    <ul>
+      <li>Intro to public key encryption (and an encryption
+	scheme)</li>
+      <li>Polynomial rings (an improved encryption scheme)</li>
+      <li>Connection of the schemes to lattices and some basics of
+	lattice geometry</li>
+      <li>Intro to digital signature basics (zero-knowledge and random
+	oracles)</li>
+      <li>Intro to digital signatures (and a lattice-based digital
+	signature scheme)</li>
+    </ul>
+    
+    <p>The only prerequisites are a basic course in linear and abstract
+      algebra.</p>
+
+    <h4 id="isogenies">### Isogeny-based cryptography<br>
+          <small>by <a href="http://www.martindale.info/">Chloe
+	  Martindale</a> (University of Bristol, UK)</small></h4>
+
+    <p>The course will cover the following topics:</p>
+
+    <ul>
+      <li>Introduction to elliptic curves and isogenies</li>
+      <li>Introduction to quaternion algebras.</li>
+      <li>Key exchange with isogenies: CSIDH, CSURF, and SQALE of
+	CSIDH.</li>
+      <li>Signatures with isogenies: CSI-FiSh, SCALLOP, and
+	SQISign.</li>
+      <li>Higher dimensions and applications: Kani's
+	irreducibility criterion: what is it and how do we use it; SQISignHD;
+	FESTA.</li>
+    </ul>
+
+    <p>Problem sessions will make heavy use
+      of <a href="https://www.sagemath.org">SageMath</a> so do
+      download and it and familiarise yourself with the basics in
+      advance.</p>
+
+    <h5>Bibliography</h5>
+    <ol>
+      <li>Lorenz Panny, <a href="https://yx7.cc/docs/misc/isog_bristol_notes.pdf">lecture notes</a> written for a 2020/1 virtual isogeny school.</li>
+      <li>Joseph H. Silverman, <a href="https://link.springer.com/book/10.1007/978-0-387-09494-6">Arithmetic of Elliptic Curves</a>.</li>
+      <li>Laia Amoros, <a href="https://isogenyschool2020.co.uk/schedule/QuaternionNotes(1).pdf">lecture notes</a> written for a 2020/1 virtual isogeny school</li>
+      <li>John Voight, <a href="https://link.springer.com/book/10.1007/978-3-030-56694-4">Quaternion Algebras</a></li>
+      <li>Wouter Castryck, Tanja Lange, Chloe Martindale, Lorenz Panny, and Joost Renes, <a href="https://eprint.iacr.org/2018/383.pdf">CSIDH: An Efficient Post-Quantum Commutative Group Action</a></li>
+      <li>Wouter Castryck and Thomas Decru, <a href="https://eprint.iacr.org/2019/1404">CSIDH on the surface</a></li>
+      <li>Jorge Chávez-Saab, Jesús-Javier Chi-Domínguez, Samuel Jaques, and Francisco Rodríguez-Henríquez, <a href="https://eprint.iacr.org/2020/1520">The SQALE of CSIDH: Sublinear Vélu Quantum-resistant isogeny Action with Low Exponents</a></li>
+      <li>Ward Beullens, Thorsten Kleinjung, and Frederik Vercauteren, <a href="https://eprint.iacr.org/2019/498">CSI-FiSh: Efficient Isogeny based Signatures through Class Group Computations</a></li>
+      <li>Luca De Feo, David Kohel, Antonin Leroux, Christophe Petit, and Benjamin Wesolowski, <a href="https://eprint.iacr.org/2020/1240">SQISign: compact post-quantum signatures from quaternions and isogenies</a></li>
+      <li>Luca De Feo, Tako Boris Fouotsa, Péter Kutas, Antonin Leroux, Simon-Philipp Merz, Lorenz Panny, and Benjamin Wesolowski, <a href="https://eprint.iacr.org/2023/058">SCALLOP: scaling the CSI-FiSh</a></li>
+      <li>Steven Galbraith, <a href="https://www.math.auckland.ac.nz/~sgal018/kani.pdf">blog post on Kani's irreducibility criterion</a></li>
+      <li>Pierrick Dartois, Antonin Leroux, Damien Robert, and Benjamin Wesolowski, <a href="https://eprint.iacr.org/2023/436.pdf">SQIsignHD: New Dimensions in Cryptography</a></li>
+      <li>Andrea Basso, Luciano Maino, and Giacomo Pope, <a href="https://eprint.iacr.org/2023/660">FESTA: Fast Encryption from Supersingular Torsion Attacks</a></li>
+    </ol>
+    
+    <h4 id="codes">### Code-based cryptography<br>
+          <small>by <a href="http://tdalazard.io/">Thomas
+	  Debris-Alazard</a> (Inria, France)</small></h4>
+
+    <p>In this course, we will study linear codes and some of their
+      applications to cryptography. Linear codes are subspaces of an
+      n-dimensional space over a finite field. They were historically
+      introduced to preserve the quality of information stored on a
+      physical device or transmitted across a noisy channel. Yet
+      surprisingly, linear codes are at the core of one of the first
+      public-key encryption schemes, constructed by McEliece in
+      1978. McEliece’s scheme was not used in practice, despite having
+      many advantages. But a few years later, Shor’s famous algorithm
+      breaking RSA put it back in the spotlight: McEliece’s scheme
+      turns out to be resistant against quantum attacks.</p>
+
+    <p>Our goal in this course will be to study linear codes from a
+      cryptographic perspective. In particular, we will study the
+      hardness of the decoding problem for random codes, the ideal
+      problem from which to construct code-based cryptosystems. Our
+      approach will be twofold: we will give evidence that the problem
+      is hard via (worst-to-average case) reductions, and we will
+      present the best algorithms to solve it (information set
+      decoding algorithms and dual attacks). Then we will study
+      McEliece's encryption scheme, and see that its security does not
+      rely solely on the hardness of decoding random
+      codes. Ultimately, we will present the lesser known Alekhnovich
+      encryption scheme, a second way of building encryption schemes
+      based on codes. We will demonstrate that, contrary to McEliece’s
+      approach, Alekhnovich’s encryption scheme does not need any
+      ad-hoc assumptions to ensure its security, and only relies on
+      the hardness of decoding random codes.</p>
+
+    <p>The material for the lectures will be: 
+      <a href="https://arxiv.org/pdf/2304.03541.pdf">Code-based
+	Cryptography: Lecture Notes</a></p>
+
+    <h4 id="multivariate">### Multivariate cryptography<br>
+          <small>by <a href="https://www.samardjiska.org/">Simona
+	  Samardjiska</a> (Radboud University, Netherlands)</small></h4>
+
+    <p>The course will cover the following topics:</p>
+
+    <h5>Part I: Design</h5>
+
+    <p>I.1. Ad-hoc designs</p>
+
+    <ul>
+      <li>general design properties</li>
+      <li>Layered schemes, UOV-based schemes, HFE-based schemes</li>
+      <li>optimization techniques</li>
+    </ul>
+    
+    <p>I.2. Provably secure designs</p>
+
+    <ul>
+      <li>Fiat-Shamir multivariate signatures</li>
+      <li>optimization techniques</li>
+    </ul>
+
+    <h5>Part II: Cryptanalysis</h5>
+
+    <p>II.1. Algorithms for solving the MQ problem</p>
+
+    <ul>
+      <li>Groebner basis algorithms, XL, Joux-Vitse</li>
+    </ul>
+    
+    <p>II.2. Key-recovery through algebraic modelling</p>
+
+    <ul>
+      <li>MinRank, equivalent keys, linearity attacks, tensor attacks, ...</li>
+    </ul>
+    
+    <p>The only prerequisites are a basic course in linear and
+      abstract algebra.</p>
+
+
+
+    
 </html>
