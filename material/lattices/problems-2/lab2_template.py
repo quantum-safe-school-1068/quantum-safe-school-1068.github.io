@@ -118,9 +118,8 @@ def test_ntt_intt():
     
     test_passed = True
     for pol in pols:
-        pol_crt = ntt(pol)
-        pol_crt_coef = intt(pol_crt)
-        if pol_crt_coef != pol:
+        pol_ntt_intt = intt(ntt(pol.copy()))
+        if pol_ntt_intt != pol:
             test_passed = False
     return test_passed
 
