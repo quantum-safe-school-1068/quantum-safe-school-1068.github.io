@@ -79,3 +79,28 @@ td {
 .brk { background-color: #eee }
 .oth { background-color: #aaffaa }
 .ps { color: #fff }
+
+/* Presentations */
+#pres-sched {
+    display: flex;
+    flex-flow: row wrap;
+}
+#pres-sched > div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: [name] auto [title] auto [end];
+    margin-bottom: 1em;
+}
+#pres-sched > div > span:first-child {
+    font-style: italic;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    grid-column: 1/end;
+}
+#pres-sched span {
+    padding: 4px 1em;
+}
+#pres-sched span:nth-child(even) {
+    font-weight: bold;
+}
