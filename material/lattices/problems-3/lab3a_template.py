@@ -23,7 +23,7 @@ def test_kgen_enc_dec():
 
     test_passed = True
     for m in ms:
-        ct = enc(pk, m)
+        ct = enc(pk, m.copy())
         mdec = dec(sk, ct)
         if m != mdec:
             test_passed = False
