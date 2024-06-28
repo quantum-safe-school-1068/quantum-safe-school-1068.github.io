@@ -35,7 +35,7 @@ def pol_vec_sub(a, b, mod):
 def pol_vec_dot(a, b, mod):
     """Polynomial vector dot-product in CRT form."""
     vec = [pol_mul_point(x, y, mod) for (x, y) in zip(a, b)]
-    return [sum([pol[i] for pol in vec]) for i in range(DEG)]
+    return [sum([pol[i] for pol in vec]) % mod for i in range(DEG)]
 
 def pol_mv_mul(A, b, mod):
     """Polynomial matrix-vector multiplication in CRT form."""
