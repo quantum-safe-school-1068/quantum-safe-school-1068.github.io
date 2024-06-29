@@ -42,11 +42,13 @@ td {
 #week1 { --rows: 17 }
 #week2 { --rows: 15 }
 .schedule {
+    --row-height: 30px;
+    --gap: 2px;
     display: grid;
     grid-template-columns: [time] auto [mon] 1fr [tue] 1fr [wed] 1fr [thu] 1fr [fri] 1fr;
-    grid-template-rows: [day] auto [schedule] repeat(var(--rows), 1.5em) [row-end];
+    grid-template-rows: [day] auto [schedule] repeat(var(--rows), var(--row-height)) [row-end];
     grid-auto-flow: column;
-    gap: 2px;
+    gap: var(--gap);
 }
 .time {
     grid-column: time;
@@ -65,6 +67,13 @@ td {
 .schedule > * {
     text-align: center;
     font-size: 80%;
+}
+.line {
+    border-top: dashed var(--gap) #5555;
+    grid-row: row-end;
+    grid-column: 2/end;
+    height: 0;
+    transform: translate(0, calc(-1 * (2 * var(--n) - 1) * (var(--row-height) + var(--gap)) - var(--gap)));
 }
 
 .lat, .iso, .cod, .mul, .oth, .brk {
